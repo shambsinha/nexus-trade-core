@@ -109,63 +109,37 @@ npm run dev
 
 Frontend will start on `http://localhost:5173`
 
-## 🌐 **Live Production Deployment**
+## 📋 **Local Development Setup**
 
-### ✅ **Frontend (Vercel)**
-- **URL**: https://nexus-trade-core.vercel.app
-- **Status**: ✅ Deployed and Live
-- **Cost**: FREE tier (100GB bandwidth/month)
+### **Prerequisites**
+- Java 17+
+- Maven 3.6+
+- Node.js 18+
+- PostgreSQL (or use Neon/Supabase)
 
-### ✅ **Backend (Render)**
-- **URL**: https://nexus-trade-backend.onrender.com
-- **Status**: ✅ Configured for deployment
-- **Cost**: FREE tier (750 hours/month)
-- **Setup**: Follow `RENDER_DEPLOYMENT.md` for deployment steps
-
-### 🔗 **API & Documentation**
-- **API**: https://nexus-trade-backend.onrender.com/api/v1
-- **Swagger UI**: https://nexus-trade-backend.onrender.com/swagger-ui.html
-- **Health Check**: https://nexus-trade-backend.onrender.com/api/v1/actuator/health
-
-## 🔄 **CI/CD Automation**
-
-### **Vercel Deployment**
-- **Trigger**: Push to `main` branch
-- **Configuration**: `frontend/vercel.json`
-- **Environment**: Set `VITE_API_BASE_URL` in Vercel dashboard
-
-### **Supabase Deployment (Recommended)**
-- **Trigger**: Push to `main` branch
-- **Configuration**: `backend/supabase.yml`
-- **Benefits**: Completely free tier with database + functions
-- **Documentation**: Follow `SUPABASE_DEPLOYMENT.md`
-
-## 📋 **Deployment Instructions**
-
-### **Quick Deploy Commands**
+### **Quick Start**
 ```bash
-# Frontend to Vercel (already deployed)
-cd frontend
-vercel --prod --yes
+# Clone repository
+git clone https://github.com/shambsinha/nexus-trade-core.git
+cd nexus-trade-core
 
-# Backend to Render (manual setup)
+# Start backend
 cd backend
-# Follow RENDER_DEPLOYMENT.md for step-by-step instructions
+./mvnw spring-boot:run
 
-# Or use GitHub Actions (webhook configured)
-git push origin main  # Triggers automatic deployment
+# Start frontend (new terminal)
+cd frontend
+npm install
+npm run dev
 ```
 
-### **Environment Setup**
-```bash
-# Production environment variables
-cp .env.production .env
+### **Access URLs**
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8080/api/v1
+- Swagger UI: http://localhost:8080/swagger-ui.html
+- Health Check: http://localhost:8080/api/v1/actuator/health
 
-# Update with your actual values
-# DATABASE_URL, JWT_SECRET, etc.
-```
-
-### API Documentation
+### **API Documentation**
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
 
