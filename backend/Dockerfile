@@ -1,4 +1,4 @@
-# Use OpenJDK 17 as base image
+# Use OpenJDK 17 as base image - Fixed for Render deployment
 FROM eclipse-temurin:17-jre-alpine
 
 # Set working directory
