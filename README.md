@@ -115,7 +115,7 @@ Frontend will start on `http://localhost:5173`
 - Java 17+
 - Maven 3.6+
 - Node.js 18+
-- PostgreSQL (or use Neon/Supabase)
+- PostgreSQL (or use Neon)
 
 ### **Quick Start**
 ```bash
