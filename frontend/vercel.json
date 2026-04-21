@@ -23,6 +23,6 @@
     }
   ],
   "env": {
-    "VITE_API_BASE_URL": "@backend_url"
+    "VITE_API_BASE_URL": "https://nexus-trade-core.onrender.com/api/v1"
   }
 }
