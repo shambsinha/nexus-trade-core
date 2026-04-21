@@ -13,7 +13,7 @@ services:
     envVars:
       - key: DATABASE_URL
         sync: false
-      value: jdbc:postgresql://dpg-cv9l8n7jm2s3f8g5a0.oregon-postgres.render.com:5432/nexustrade_prod
+      value: jdbc:postgresql://ep-little-rain-anufkqgy.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
       - key: DATABASE_USERNAME  
         sync: false
         value: nexustrade_user

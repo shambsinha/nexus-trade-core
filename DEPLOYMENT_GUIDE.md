@@ -69,19 +69,16 @@ vercel --prod
 
 ## 🖥️ Backend Deployment (Render)
 
-### Step 4: Create PostgreSQL Database on Render
-1. **Login**: https://render.com
-2. **Create New PostgreSQL**:
-   - **Database Name**: `nexustrade_prod`
-   - **User**: `nexustrade_user`
-   - **Password**: Generate secure password
-   - **Region**: Oregon (US West)
-3. **Save Connection Details**:
+### Step 4: Connect to Neon PostgreSQL Database
+1. **Login**: https://neon.tech (or use your existing account)
+2. **Get Connection Details**:
+   - **Database**: `neondb` (already created)
+   - **Connection String**: Available in Neon dashboard
+   - **Username**: `neondb_owner` (default)
+   - **Password**: Your existing Neon password
+3. **Connection URL**:
    ```
-   Host: dpg-cv9l8n7jm2s3f8g5a0.oregon-postgres.render.com
-   Port: 5432
-   Database: nexustrade_prod
-   User: nexustrade_user
+   jdbc:postgresql://ep-little-rain-anufkqgy.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
    ```
 
 ### Step 5: Deploy Backend to Render
@@ -134,6 +131,13 @@ Authentication: https://nexus-trade-core-backend.onrender.com/api/v1/auth
 Assets: https://nexus-trade-core-backend.onrender.com/api/v1/assets
 Health: https://nexus-trade-core-backend.onrender.com/api/v1/actuator/health
 Swagger: https://nexus-trade-core-backend.onrender.com/swagger-ui.html
+```
+
+### Database Connection
+```
+Neon PostgreSQL: ep-little-rain-anufkqgy.c-6.us-east-1.aws.neon.tech
+Database: neondb
+Username: neondb_owner
 ```
 
 ## 🧪 Testing Deployment
