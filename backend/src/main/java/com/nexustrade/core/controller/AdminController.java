@@ -3,6 +3,10 @@ package com.nexustrade.core.controller;
 import com.nexustrade.core.entity.User;
 import com.nexustrade.core.repository.UserRepository;
 import com.nexustrade.core.enums.Role;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -14,6 +18,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/v1/admin")
 @PreAuthorize("hasRole('ADMIN')")
+@Tag(name = "Admin", description = "Admin-only user management and system statistics")
 public class AdminController {
 
     @Autowired
