@@ -35,11 +35,6 @@
     "framework": "vite",
     "buildCommand": "npm run build",
     "outputDirectory": "dist",
-    "installCommand": "npm install",
-    "functions": {
-      "api/index.js": {
-        "runtime": "@vercel/node"
-      }
-    }
+    "installCommand": "npm install --legacy-peer-deps"
   }
 }

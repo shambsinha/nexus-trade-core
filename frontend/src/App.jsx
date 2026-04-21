@@ -5,12 +5,6 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import './index.css';
 
-// Debug API configuration
-console.log('=== API Configuration Debug ===');
-console.log('VITE_API_BASE_URL:', import.meta.env.VITE_API_BASE_URL);
-console.log('MODE:', import.meta.env.MODE);
-console.log('==============================');
-
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
