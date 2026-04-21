@@ -5,7 +5,7 @@ services:
     env: docker
     plan: free
     dockerContext: ./backend
-    dockerfilePath: ./backend/Dockerfile.prod
+    dockerfilePath: ./backend/Dockerfile
     healthCheckPath: /api/v1/actuator/health
     autoDeploy: true
     buildCommand: ./mvnw clean package -DskipTests
@@ -13,7 +13,7 @@ services:
     envVars:
       - key: DATABASE_URL
         sync: false
-      value: jdbc:postgresql://ep-little-rain-anufkqgy.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
+      value: jdbc:postgresql://ep-little-rain-anufkqgy-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
       - key: DATABASE_USERNAME  
         sync: false
         value: neondb_owner
