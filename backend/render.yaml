@@ -42,42 +42,11 @@ services:
     - key: SERVER_PORT
       value: "8080"
   
-  # Instance type (paid tier - Starter)
-  instanceType: starter
+  # Instance type (free tier)
+  instanceType: free
   
   # Region
   region: oregon
   
   # Plan name
-  plan: starter
-  
-  # Persistent storage configuration
-  disk:
-    name: nexus-trade-storage
-    sizeGB: 10
-    mountPath: /app/data
-  
-  # SSH access configuration
-  sshKeys:
-    - name: nexus-trade-ssh
-      publicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC... your-public-key-here
-  
-  # Scaling configuration
-  scaling:
-    minInstances: 1
-    maxInstances: 3
-    targetCPUUtilization: 70
-  
-  # Monitoring and alerts
-  healthCheck:
-    path: /api/v1/actuator/health
-    initialDelaySeconds: 30
-    periodSeconds: 10
-    timeoutSeconds: 5
-    successThreshold: 3
-    failureThreshold: 3
-  
-  # Performance optimization
-  performance:
-    cpu: 1
-    memory: 512
+  plan: free
