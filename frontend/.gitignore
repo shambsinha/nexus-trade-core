@@ -1,0 +1,32 @@
+# --- Security & Secrets ---
+.env
+.env.local
+.env.*.local
+# Ignore actual config files that contain your Cloud DB passwords
+backend/src/main/resources/application.yml
+backend/src/main/resources/application.properties
+
+# --- Backend (Java/Maven) ---
+backend/target/
+backend/bin/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+*.jar
+*.war
+*.zip
+
+# --- Frontend (Node/Vite) ---
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.env
+
+# --- IDE & OS (Cleanliness) ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
