@@ -5,7 +5,7 @@ services:
     env: docker
     plan: free
     dockerContext: ./backend
-    dockerfilePath: ./backend/Dockerfile
+    dockerfilePath: ./backend/Dockerfile.render
     healthCheckPath: /api/v1/actuator/health
     autoDeploy: true
     buildCommand: ./mvnw clean package -DskipTests
