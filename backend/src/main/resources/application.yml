@@ -21,6 +21,14 @@ spring:
     init:
       mode: always
 
+# Supabase configuration (alternative)
+# spring:
+#   datasource:
+#     url: ${SUPABASE_DB_URL:jdbc:postgresql://postgres:${SUPABASE_DB_PASSWORD}@db.########.supabase.co:5432/postgres}
+#     username: ${SUPABASE_DB_USERNAME:postgres}
+#     password: ${SUPABASE_DB_PASSWORD}
+#     driver-class-name: org.postgresql.Driver
+
 app:
   jwt:
     secret: ${JWT_SECRET:mySecretKey123456789012345678901234567890}
