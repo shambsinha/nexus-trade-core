@@ -109,6 +109,65 @@ npm run dev
 
 Frontend will start on `http://localhost:5173`
 
+## 🌐 **Live Production Deployment**
+
+### ✅ **Frontend (Vercel)**
+- **URL**: https://nexus-trade-core.vercel.app
+- **Status**: ✅ Deployed and Live
+- **Cost**: FREE tier (100GB bandwidth/month)
+
+### ✅ **Backend (Render)**
+- **URL**: https://nexus-trade-backend.onrender.com
+- **Status**: ✅ Configured for deployment
+- **Cost**: FREE tier (750 hours/month)
+- **Setup**: Follow `RENDER_DEPLOYMENT.md` for deployment steps
+
+### 🔗 **API & Documentation**
+- **API**: https://nexus-trade-backend.onrender.com/api/v1
+- **Swagger UI**: https://nexus-trade-backend.onrender.com/swagger-ui.html
+- **Health Check**: https://nexus-trade-backend.onrender.com/api/v1/actuator/health
+
+## 🔄 **CI/CD Automation**
+
+### **Vercel Deployment**
+- **Trigger**: Push to `main` branch
+- **Configuration**: `frontend/vercel.json`
+- **Environment**: Set `VITE_API_BASE_URL` in Vercel dashboard
+
+### **Render Deployment**
+- **Trigger**: Push to `main` branch
+- **Configuration**: `.github/workflows/render-deploy.yml`
+- **Webhook Setup**: 
+  1. Go to Render dashboard → Web Service → Settings
+  2. Add webhook: `https://github.com/shambsinha/nexus-trade-core`
+  3. Select events: Pushes
+  4. Secret: `RENDER_API_KEY` from Render dashboard
+
+## 📋 **Deployment Instructions**
+
+### **Quick Deploy Commands**
+```bash
+# Frontend to Vercel (already deployed)
+cd frontend
+vercel --prod --yes
+
+# Backend to Render (manual setup)
+cd backend
+# Follow RENDER_DEPLOYMENT.md for step-by-step instructions
+
+# Or use GitHub Actions (webhook configured)
+git push origin main  # Triggers automatic deployment
+```
+
+### **Environment Setup**
+```bash
+# Production environment variables
+cp .env.production .env
+
+# Update with your actual values
+# DATABASE_URL, JWT_SECRET, etc.
+```
+
 ### API Documentation
 - Swagger UI: `http://localhost:8080/swagger-ui.html`
 - OpenAPI JSON: `http://localhost:8080/v3/api-docs`
