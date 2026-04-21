@@ -134,14 +134,11 @@ Frontend will start on `http://localhost:5173`
 - **Configuration**: `frontend/vercel.json`
 - **Environment**: Set `VITE_API_BASE_URL` in Vercel dashboard
 
-### **Render Deployment**
+### **Supabase Deployment (Recommended)**
 - **Trigger**: Push to `main` branch
-- **Configuration**: `.github/workflows/render-deploy.yml`
-- **Webhook Setup**: 
-  1. Go to Render dashboard → Web Service → Settings
-  2. Add webhook: `https://github.com/shambsinha/nexus-trade-core`
-  3. Select events: Pushes
-  4. Secret: `RENDER_API_KEY` from Render dashboard
+- **Configuration**: `backend/supabase.yml`
+- **Benefits**: Completely free tier with database + functions
+- **Documentation**: Follow `SUPABASE_DEPLOYMENT.md`
 
 ## 📋 **Deployment Instructions**
 
